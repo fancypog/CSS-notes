@@ -16,6 +16,7 @@
       border-radius: 50px;
       font-weight: bold;
       cursor: pointer;
+      margin-bottom: 30px;
     }
 
     .is-subscribed {
@@ -25,6 +26,20 @@
 
     body {
       font-family: Arial;
+    }
+
+    .cost-input {
+      font-size: 15px;
+      padding: 10px;
+    }
+
+    .calculate-button {
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 15px;
+      padding: 12px 15px;
+      cursor: pointer;
     }
 
   </style>
@@ -45,7 +60,7 @@
   "> 
   <button onclick="
     calculateTotal();
-  ">Calculate</button>
+  " class="calculate-button">Calculate</button>
   
   
   <script>
