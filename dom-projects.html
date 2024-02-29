@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+  <style>
+    .subscribe-btn {
+      border: none;
+      background-color: black;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+
+    <!--innerHTML counts spaces, innerText does not-->
+  <button onclick="subscribe()" class="subscribe-btn">Subscribe</button> 
+
+
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of order" class="cost-input" onkeydown="
+    console.log(event.key);
+    if (event.key === 'Enter') {
+      calculateTotal();
+    }
+  "> 
+  <button onclick="
+    calculateTotal();
+  ">Calculate</button>
+  
+  
+  <script>
+    function subscribe() {
+      const buttonElement = document.querySelector('.subscribe-btn');
+
+      if(buttonElement.innerHTML === 'Subscribe') {
+      buttonElement.innerHTML = 'Subscribed';
+      } else {
+      buttonElement.innerHTML = 'Subscribe';
+      }
+    }
+
+
+    function calculateTotal() {
+      const inputElement = document.querySelector('.cost-input');
+      let cost =  Number(inputElement.value); // Value from the DOM is a string
+
+      if(cost < 40) {
+        cost += 10;
+      }
+
+      document.querySelector(.total-cost).innerHTML = `$${cost}`;
+    }
+  
+
+    function handleCostKeyDown(event) {
+      if(event.key === 'Enter') {
+        calculateTotal();
+      }
+    }
+
+
+    //What is inside the window(browser)?
+    window.document
+    window.console.log(); //Same as console.log()
+    //window is automatically added when using console.log() and document
+
+
+  </script>
+</body>
+</html>
