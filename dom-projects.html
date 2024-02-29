@@ -19,9 +19,14 @@
     }
 
     .is-subscribed {
-      background-color: grey;
+      background-color: rgb(240, 240, 240);
       color: black;
     }
+
+    body {
+      font-family: Arial;
+    }
+
   </style>
 </head>
 <body>
@@ -52,6 +57,7 @@
       buttonElement.classList.add('is-subscribed');
       } else {
       buttonElement.innerHTML = 'Subscribe';
+      buttonElement.classList.remove('is-subscribed');
       }
     }
 
